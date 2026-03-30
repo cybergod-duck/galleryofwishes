@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Of Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery Of Wishes</h1>
+    </header>
+    <main class="gallery">
+        <!-- Images will be added here -->
+    </main>
+    <script>
+        const gallery = document.querySelector('.gallery');
+        for (let i = 1; i <= 13; i++) {
+            const img = document.createElement('img');
+            img.src = `images/download (${i}).png`;
+            img.alt = `Wish ${i}`;
+            gallery.appendChild(img);
+        }
+    </script>
+</body>
+</html>
