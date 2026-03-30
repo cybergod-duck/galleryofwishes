@@ -11,17 +11,21 @@
         <h1>Gallery Of Wishes</h1>
     </header>
     <main class="gallery">
-        <!-- Special image first -->
-        <img src="images/download (13).png" alt="Special Wish" class="special-image">
-        <!-- Other images -->
         <script>
             const gallery = document.querySelector('.gallery');
-            for (let i = 1; i <= 12; i++) {
+            const images = [
+                'download (1).png', 'download (2).png', 'download (3).png', 'download (4).png',
+                'download (5).png', 'download (6).png', 'download (7).png', 'download (8).png',
+                'download (9).png', 'download (10).png', 'download (11).png', 'download (12).png',
+                'download (13).png', 'download.png', 'he_sings_from_202603300116.png'
+            ];
+            
+            images.forEach((src, index) => {
                 const img = document.createElement('img');
-                img.src = `images/download (${i}).png`;
-                img.alt = `Wish ${i}`;
+                img.src = `images/${src}`;
+                img.alt = `Wish ${index + 1}`;
                 gallery.appendChild(img);
-            }
+            });
         </script>
     </main>
 </body>
