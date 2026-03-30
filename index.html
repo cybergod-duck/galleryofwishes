@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Of Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery Of Wishes</h1>
+    </header>
+    <main class="gallery">
+        <script>
+            const gallery = document.querySelector('.gallery');
+            const images = [
+                'download (1).png', 'download (2).png', 'download (3).png', 'download (4).png',
+                'download (5).png', 'download (6).png', 'download (7).png', 'download (8).png',
+                'download (9).png', 'download (10).png', 'download (11).png', 'download (12).png',
+                'download (13).png', 'download.png', 'he_sings_from_202603300116.png'
+            ];
+           
+            images.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = `Wish ${index + 1}`;
+                gallery.appendChild(img);
+            });
+        </script>
+    </main>
+</body>
+</html>
