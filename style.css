@@ -13,8 +13,8 @@ h1 {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min size */
+    gap: 20px;
     padding: 20px;
 }
 
@@ -22,10 +22,10 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(255, 167, 38, 0.5);
+    box-shadow: 0 6px 12px rgba(255, 167, 38, 0.6); /* Slightly stronger shadow */
     transition: transform 0.3s ease-in-out;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08); /* Slightly larger hover effect */
 }
