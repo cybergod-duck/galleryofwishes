@@ -11,28 +11,18 @@
         <h1>Gallery Of Wishes</h1>
     </header>
     <main class="gallery">
-        <!-- Images will be added here -->
-        <div id="special-image-container"></div>
+        <!-- Special image first -->
+        <img src="images/download (13).png" alt="Special Wish" class="special-image">
+        <!-- Other images -->
+        <script>
+            const gallery = document.querySelector('.gallery');
+            for (let i = 1; i <= 12; i++) {
+                const img = document.createElement('img');
+                img.src = `images/download (${i}).png`;
+                img.alt = `Wish ${i}`;
+                gallery.appendChild(img);
+            }
+        </script>
     </main>
-    <script>
-        const gallery = document.querySelector('.gallery');
-        const specialContainer = document.getElementById('special-image-container');
-        
-        // Assuming the special image is 'download (13).png' based on previous file list
-        // Adjust the loop to skip it or handle it separately
-        for (let i = 1; i <= 12; i++) {
-            const img = document.createElement('img');
-            img.src = `images/download (${i}).png`;
-            img.alt = `Wish ${i}`;
-            gallery.appendChild(img);
-        }
-        
-        // Add the special image
-        const specialImg = document.createElement('img');
-        specialImg.src = 'images/download (13).png';
-        specialImg.alt = 'Special Wish';
-        specialImg.classList.add('special-image');
-        specialContainer.appendChild(specialImg);
-    </script>
 </body>
 </html>

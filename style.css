@@ -17,21 +17,22 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Increased gap for more spread */
+    gap: 10px; /* Tight gap for "all together" look */
     padding: 40px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .gallery img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.3s ease-in-out, z-index 0.3s;
     cursor: pointer;
     position: relative;
+    margin: -5px; /* Overlap */
 }
 
 .gallery img:hover {
@@ -39,34 +40,29 @@ h1 {
     z-index: 10;
 }
 
-/* Add some random rotation to images for a more "piled" look */
-.gallery img:nth-child(odd) {
-    transform: rotate(-8deg);
-}
-.gallery img:nth-child(even) {
-    transform: rotate(8deg);
-}
-.gallery img:nth-child(odd):hover {
-    transform: scale(1.2) rotate(0deg);
-}
-.gallery img:nth-child(even):hover {
-    transform: scale(1.2) rotate(0deg);
-}
-
-#special-image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
+/* Special image at the top */
 .special-image {
-    width: 500px; /* Full dimensions */
-    height: auto;
-    border: 10px solid #fff;
-    box-shadow: 0 8px 12px rgba(0,0,0,0.4);
-    transform: rotate(0deg) !important; /* No rotation */
+    width: 100% !important; /* Full length */
+    height: auto !important;
+    margin-bottom: 20px !important;
+    border: 10px solid #fff !important;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.4) !important;
+    transform: none !important; /* No rotation */
 }
 .special-image:hover {
-    transform: scale(1.05) !important;
+    transform: scale(1.02) !important;
+}
+
+/* Random rotation for others */
+.gallery img:not(.special-image):nth-child(odd) {
+    transform: rotate(-5deg);
+}
+.gallery img:not(.special-image):nth-child(even) {
+    transform: rotate(5deg);
+}
+.gallery img:not(.special-image):nth-child(odd):hover {
+    transform: scale(1.2) rotate(0deg);
+}
+.gallery img:not(.special-image):nth-child(even):hover {
+    transform: scale(1.2) rotate(0deg);
 }
