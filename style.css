@@ -25,7 +25,9 @@ h1 {
 
 .gallery img {
     width: 300px; /* Larger, normal dimensions */
-    height: auto;
+    height: 300px; /* Fixed height to prevent morphing */
+    object-fit: contain; /* Ensure full image is visible without distortion */
+    background-color: #fff; /* Fill background if aspect ratio differs */
     border: 5px solid #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.3s ease-in-out;
