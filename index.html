@@ -22,7 +22,7 @@
            
             images.forEach((src, index) => {
                 const img = document.createElement('img');
-                img.src = src;
+                img.src = src;                    // fixed - loads straight from root
                 img.alt = `Wish ${index + 1}`;
                 gallery.appendChild(img);
             });
