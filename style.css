@@ -25,8 +25,9 @@ h1 {
 
 .gallery img {
     width: auto; /* Maintain original dimensions */
-    height: 300px; /* Fixed height for consistency, width auto */
-    object-fit: cover; /* Maintain aspect ratio */
+    height: auto; /* Allow natural height */
+    max-height: 400px; /* Limit height to keep them manageable */
+    max-width: 100%; /* Ensure they don't overflow */
     border: 2px solid #fff;
     box-shadow: 0 0 15px #ffeb3b; /* Glowing yellow shadow */
     transition: transform 0.3s ease-in-out;
