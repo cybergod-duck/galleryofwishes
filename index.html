@@ -19,10 +19,10 @@
                 'download (9).png', 'download (10).png', 'download (11).png', 'download (12).png',
                 'download (13).png', 'download.png', 'he_sings_from_202603300116.png'
             ];
-            
+           
             images.forEach((src, index) => {
                 const img = document.createElement('img');
-                img.src = `images/${src}`;
+                img.src = src;
                 img.alt = `Wish ${index + 1}`;
                 gallery.appendChild(img);
             });
