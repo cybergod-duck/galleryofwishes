@@ -22,7 +22,7 @@
            
             images.forEach((src, index) => {
                 const img = document.createElement('img');
-                img.src = `images/${src}`;
+                img.src = src;                    // fixed: images are in root
                 img.alt = `Wish ${index + 1}`;
                 gallery.appendChild(img);
             });
