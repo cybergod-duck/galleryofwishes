@@ -1,6 +1,6 @@
 body {
     background-color: #fff9c4; /* Light yellow */
-    font-family: 'Georgia', serif; /* More classic/old-timey */
+    font-family: 'Georgia', serif;
     text-align: center;
     color: #f57c00; /* Warm orange */
     padding: 20px;
@@ -17,24 +17,39 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 10px; /* Reduced gap for overlapping effect */
     padding: 40px;
-    background-color: #ffe082; /* Slightly darker yellow for the "hanger" background */
-    border: 10px solid #d84315; /* Dark orange frame */
-    border-radius: 5px;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .gallery img {
-    width: 250px; /* Fixed size for more uniform look */
-    height: 250px;
+    width: 200px; /* Slightly smaller to allow more overlap */
+    height: 200px;
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
     cursor: pointer;
+    margin: -10px; /* Negative margin to create overlap */
+    position: relative;
 }
 
 .gallery img:hover {
-    transform: scale(1.1) rotate(2deg);
+    transform: scale(1.2) rotate(0deg);
+    z-index: 10;
+}
+
+/* Add some random rotation to images for a more "piled" look */
+.gallery img:nth-child(odd) {
+    transform: rotate(-5deg);
+}
+.gallery img:nth-child(even) {
+    transform: rotate(5deg);
+}
+.gallery img:nth-child(odd):hover {
+    transform: scale(1.2) rotate(0deg);
+}
+.gallery img:nth-child(even):hover {
+    transform: scale(1.2) rotate(0deg);
 }
